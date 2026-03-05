@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Baloo+Bhai+2:wght@400..800&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg-color: #ecf7fb;
+  --text-color: #183b56;
+  --para-color: #5a7184;
+  --button-bg: #404c99;
+  --button-text: #ffffff;
+  --logo-color: #404c99;
+  --ham-color:#183B56;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Abhaya Libre", serif;
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  margin: auto;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  max-width: 1440px;
+ position: relative;
+ /* margin-top:20px; */
+ height: 6rem;
+ margin: 0 auto;
+
+}
+
+
+
+.logo {
+  margin-left: 2.4rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo a {
+  font-family: "Baloo Bhai 2", sans-serif;
+  font-size: 2.35rem;
+  font-weight: bold;
+  color: var(--logo-color);
+}
+
+.nav-button {
+  margin-right: 2.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.bx{
+    font-size: 2.4rem;
+    color: var(--ham-color);
+}
+
+.bx.bx-x{
+    display: none;
+}
+
+
+
+
+.nav-menu-cta{
+    position: absolute;
+    width: 90vw;
+    background-color: var(--button-text);
+    width: 100vw;
+    height: 100vh;
+    left: -100%;
+    transition: left 0.3s ;
+ 
+    /* margin: ; */
+}
+
+.nav-item-list li{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.nav-item-list li a{
+    color: var(--ham-color);
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+
+
+.login-btn{
+    display: inline-block;
+    background-color: transparent;
+    height: 64px;
+    width: 134px;
+    border: solid #183B56 .1rem;
+    border-radius: 15px;
+    margin-right: 2rem;
+
+
+    & a{
+        font-size: 1.6rem;
+        color: var(--ham-color);
+    }
+}
+
+.cta-button{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-menu-cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.nav-item-list{
+    padding: 0;
+}
+
+
+.nav-button .bx.bx-menu-right.active{
+    display: none;
+}
+
+
+.nav-button .bx.bx-x.active{
+    display: block;
+}
+
+.nav-menu-cta.active{
+    left: 0;
+}
+
+
+@media screen and (min-width:720px) {
+    .nav-button{
+        display: none;
+    }
+
+
+    .nav-menu-cta{
+        position: unset;
+        width: unset;
+        height: unset;
+        background-color: unset;
+    }
+.nav-menu-cta {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    justify-content: space-between;
+}
+.nav-item-list {
+   display: flex;
+   gap: 20px;
+
+
+   & li a{
+    font-size: 2rem;
+   }
+}
+
+.login-btn{
+    height: 3rem;
+    width: 6rem;
+
+    & a{
+        font-size: 1rem;
+    }
+}
+
+.login-btn.s{
+    display: none;
+}
+
+.cta-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    justify-content: flex-start;
+    flex: 1;
+}
+
+}
+
+@media screen and (min-width:1020px) {
+    html{
+        font-size: 72.5%;
+    }
+}
