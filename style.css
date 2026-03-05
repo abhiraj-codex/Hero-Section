@@ -16,6 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
 html {
@@ -98,7 +99,7 @@ header {
     height: 100vh;
     left: -100%;
     transition: left 0.3s ;
- 
+    z-index: 10;
     /* margin: ; */
 }
 
@@ -159,6 +160,133 @@ header {
     left: 0;
 }
 
+/* Hero section start */
+
+.hero-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 2rem;
+    position: relative;
+    width: 35rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+#main{
+    width: 29.765rem;
+    height: 34.177rem;
+    
+}
+
+.hero-img .extra.a{
+    position: absolute;
+    width: 9.398rem;
+    height: 4.657rem;
+    top: 30%;
+    left: 4%;
+}
+
+.hero-img .extra.b{
+    position: absolute;
+    width: 6.35rem;
+    height:4.281rem;
+    right:8%;
+    top: 35%;
+}
+
+.hero-img .extra.c{
+    position: absolute;
+    width: 8.942rem;
+    height:6.841rem;
+    right:8%;
+    bottom: 0;
+}
+.hero-img .extra.d{
+       position: absolute;
+    width: 6.729rem;
+    height:6.401rem;
+   top: 0;
+   right: 10%;
+}
+
+.heading{
+    font-size: 3rem;
+    width: 25rem;
+    height: 8rem;
+    line-height: 4rem;
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.para{
+    font-family: 'jost';
+    font-size: 20;
+    line-height: 2.5rem;
+    color: var(--para-color);
+    width: 17rem;
+    margin-bottom: 5rem;
+}
+
+.hero-btn{
+    display:block;
+    background-color: var(--button-bg);
+    width: 18.6rem;
+    height: 7rem;
+    border-radius: 1.5rem;
+    border: none;
+    color: var(--button-text);
+   font-family: "Abhaya Libre", serif;
+   font-size: 16px;
+   font-weight: bold;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   height: 30rem;
+   margin: 0 auto;
+   
+   width: fit-content;
+}
+/* Media Queries */
+
+@media screen and (max-width:350px){
+    .hero-img #main{
+width: 25.765rem;
+    height: 30.177rem;
+      
+    }
+
+    .hero-img{
+        width: unset;
+      overflow: hidden;
+    }
+
+  
+
+    .heading{
+        width: 20rem;
+        
+    }
+
+    .para{
+        width: 20rem;
+        margin-top: 2rem;
+    }
+
+
+.hero-btn{
+    display: none;
+}
+.hero-content{
+    overflow: hidden;
+}
+}
+
+
 
 @media screen and (min-width:720px) {
     .nav-button{
@@ -212,10 +340,56 @@ header {
     flex: 1;
 }
 
+.main-hero{
+    display: flex;
+    flex-direction: row-reverse;
+ 
+}
+
+.hero-content{
+    display: flex;
+    text-align: left;
+    justify-content: end;
+    /* margin: ; */
+    margin-left: 5rem;
+}
+.heading{
+    margin:0 ;
+    width: 20rem;
+}
+
+.para{
+    margin: 0;
+    width: 25rem;
+    margin-top: 5rem;
+}
+
+.hero-btn{
+    width: 14.6rem;
+    height: 5rem;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
 }
 
 @media screen and (min-width:1020px) {
     html{
         font-size: 72.5%;
     }
+
+    .heading{
+        width: 30rem;
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    .para{
+        margin-top: 7rem;
+    }
+
+    .hero-content{
+        margin-left:10rem;
+        margin-top: 5rem;
+    }
 }
+
